@@ -1,0 +1,55 @@
+
+
+/* Voilà comment on déclare une keyframe.
+les pourcentages ce sont les étapes.
+0% c'est l'étape 1, 33% la 2, etc. (ça aurait pu être 0%, 25%, 44%, etc.
+Tu peux très bien faire 1 milliard d'étapes ou juste 2, c'est toi qui vois.
+Il faut retenir que 100% c'est toujours l'étape finale et 0% l'étape du début, peu importe dans l'ordre dans lesquels tu les écris.
+Moi j'ai choisi d'en faire 4. */
+
+@keyframes effet-hover {
+    /* Regarde bien ce que j'ai fait:
+    J'ai pris la première couleur (bleue claire) là et je l'ai échangée avec la dernière(noire)...
+    Donc ne regarde que la ligne 0% et la ligne 100% */
+    0%{
+        /* cette ligne */
+        background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 35%, rgba(2,0,36,1) 100%);
+    }
+    33%{
+        background: linear-gradient(90deg, rgba(1,140,120,1) 0%, rgba(9,9,121,1) 35%, rgba(1,70,100,1) 100%);
+    }
+    66%{
+        background: linear-gradient(90deg, rgba(1,70,120,1) 0%, rgba(9,9,121,1) 35%, rgba(1,140,150,1) 100%)
+    }
+    100%{
+        /* et cette ligne */
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
+    
+    /* Mais je veux que ce soit naturel, que ça ne soit pas saccadé,
+    et la gestion des gradients c'est plus complexe qu'une transition entre deux couleurs simples.
+    Donc, j'ai créé les étapes 33% et 66% en diminuant/augmentant les valeurs pour les rapprocher
+    progressivement vers les valeurs finales. */
+}
+/* NE T'EN FAIS PAS, JE N'INVENTE PAS LES COULEURS TOUT SEUL, JE ME SERS DE CA =>
+https://cssgradient.io/ */
+
+
+/* Si jamais tu trouves ça un peu flou, on va faire ça plus simplement dans keyframes-simple.css */
+
+@keyframes effet-sortie-hover {
+    /* Une fois que tu auras saisi le truc, tu pourras "décommenter" la ligne "animation" au nom de "effet-sortie-hover" pour que ça fasse plus propre :) */
+    100%{
+        background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 35%, rgba(2,0,36,1) 100%);
+    }
+    66%{
+        background: linear-gradient(90deg, rgba(1,140,120,1) 0%, rgba(9,9,121,1) 35%, rgba(1,70,100,1) 100%);
+    }
+    33%{
+        background: linear-gradient(90deg, rgba(1,70,120,1) 0%, rgba(9,9,121,1) 35%, rgba(1,140,150,1) 100%)
+    }
+    0%{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
+    
+}

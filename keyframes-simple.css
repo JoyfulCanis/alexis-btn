@@ -1,0 +1,13 @@
+@keyframes simple {
+    /* N'oublie pas de décommenter .lol et .lol:hover dans le fichier stylealexis.css */
+    0%{
+        background: red;
+    }
+    50%{
+        background:  yellow;
+    }
+    100%{
+        background: green;
+    }
+
+}

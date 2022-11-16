@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+
+.btn{
+    /* Propriétés de base osef */
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    /* Fin de proriétés de base osef */
+
+    /* Si tu veux t'amuser avec les valeurs sur le keyframe, commente la ligne du background ici */
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 35%, rgba(2,0,36,1) 100%);
+
+    /* Une fois que tu auras compris comment fonctionne le keyframe, tu pourras "décommenter" la ligne suivante :)
+    pour l'instant n'y fais pas attention ! */
+
+    /* animation: effet-sortie-hover 0.2s forwards; */
+}
+
+.btn:hover{
+    /* Là on va nommer l'animation "effet-hover", c'est comme le nom d'une variable qui va la lier à @keyframes (qu'on verra sur l'autre fichier).
+     Ensuite, on va lui dire combien de temps elle va durer (en secondes).
+     Enfin, je lui ai donné une direction.*/
+    animation: effet-hover 0.2s forwards;
+
+    /* CSS comprend directement ce que tu veux lui dire, t'es pas obligé de tout déclaré.
+    Mais si jamais tu veux avoir toutes les propriétés que tu peux changer, voici des indications */
+
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+
+.lol{
+    /* décommente si tu veux activer le keyframes-simple */
+
+
+    /* width: 100px;
+    height: 100px;
+    background-color:  red;
+    text-align: center;
+    line-height: 100px; */
+    color: white;
+}
+
+.lol:hover{
+    /* décommente si tu veux activer le keyframes-simple */
+
+    
+    /* animation: simple 1s forwards; */
+}
